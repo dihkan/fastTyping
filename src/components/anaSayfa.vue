@@ -4,8 +4,10 @@
     <p class="lead">
       Klavye Hızınızı Test Edebilirsiniz...Süreniz Yeşil kutucukta yazmaktadır.
     </p>
-    <div class="status bg-light mb-3 fs-5 d-flex justify-content-between">
-      <div>
+    <div
+      class="status bg-light mb-3 fs-5 d-flex justify-content-between align-content-center"
+    >
+      <div class="mesaj">
         Doğru Kelime Sayısı : {{ trueCount }} - Yanlış Kelime Sayısı :
         {{ falseCount }}
       </div>
@@ -137,7 +139,7 @@ const yenile = () => {
     "Lucida Sans", Arial, sans-serif;
 }
 .anadiv {
-  background-color: #9234aeaa;
+  background-color: #266d69e6;
   color: #111;
   border-radius: 10px;
   box-shadow: 5px 5px 10px;
@@ -153,5 +155,9 @@ const yenile = () => {
 }
 .cervceve {
   background-color: #111;
+}
+.mesaj {
+  height: 45px;
+  line-height: 45px;
 }
 </style>
