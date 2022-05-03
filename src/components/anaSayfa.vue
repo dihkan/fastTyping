@@ -60,6 +60,7 @@
               placeholder="Start Typing"
               v-model="writed"
               @keydown="isStarted != true ? startTimer() : ''"
+              @keydown.enter="bittiMi"
             />
             <div class="input-group-append" id="button-addon4">
               <button
@@ -115,6 +116,17 @@ watch(writed, newV => {
     }
   }
 });
+const bittiMi = () => {
+  if (state.kelime[0] === writed.value) {
+    isTrue = 1;
+  } else {
+    isTrue = 0;
+  }
+  classControl.value = isTrue == 1 ? "wordClass" : "wordClass bg-danger";
+  isTrue == 1 ? trueCount.value++ : falseCount.value++;
+  state.kelime.splice(0, 1);
+  writed.value = "";
+};
 const startTimer = () => {
   isStarted.value = true;
 
